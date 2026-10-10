@@ -10,6 +10,14 @@ It brings server lifecycle controls, profiles, file management, configuration ed
 
 Project website: **https://spiderover.github.io/GamePanel/**
 
+## Public source snapshot
+
+The repository includes a sanitized snapshot of the current CurseForge integration under [`src/`](src/). Production credentials, SSH keys, databases, logs, private deployment data, and host-specific configuration are intentionally excluded.
+
+- [Public source snapshot](src/)
+- [Architecture and CurseForge flow](ARCHITECTURE.md)
+- [Security guidance](SECURITY.md)
+
 ## Features
 
 - Start, stop, restart, and monitor the game server host
