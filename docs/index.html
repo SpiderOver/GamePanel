@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GamePanel is a self-hosted game server administration panel focused on Minecraft server management.">
+  <meta name="theme-color" content="#061321">
+  <title>GamePanel — Self-hosted game server management</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <header class="topbar shell glass">
+    <a class="brand" href="#top" aria-label="GamePanel home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img">
+          <path d="M24 4 41 13.5v21L24 44 7 34.5v-21L24 4Z"/>
+          <path d="m7 13.5 17 9.7 17-9.7M24 23.2V44"/>
+        </svg>
+      </span>
+      <span>GamePanel</span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#curseforge">CurseForge</a>
+      <a href="#architecture">Architecture</a>
+      <a class="button compact" href="https://github.com/SpiderOver/GamePanel">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">SELF-HOSTED · NON-COMMERCIAL · OPEN DEVELOPMENT</p>
+        <h1>Run your game server from one clean control panel.</h1>
+        <p class="lede">GamePanel combines server lifecycle controls, files, configuration, players, backups, monitoring, console access and Minecraft mod management in a single self-hosted web interface.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/SpiderOver/GamePanel">View source on GitHub</a>
+          <a class="button" href="#curseforge">CurseForge integration</a>
+        </div>
+        <div class="badges" aria-label="Project properties">
+          <span>Self-hosted</span>
+          <span>Minecraft</span>
+          <span>Low-volume API usage</span>
+          <span>No public mod mirror</span>
+        </div>
+      </div>
+
+      <div class="mockup glass" aria-label="Illustration of the GamePanel interface">
+        <div class="mock-sidebar">
+          <div class="mock-logo"><span class="cube"></span> GamePanel</div>
+          <div class="mock-nav active">⌂ <span>Overview</span></div>
+          <div class="mock-nav">▱ <span>Profiles</span></div>
+          <div class="mock-nav">□ <span>Files</span></div>
+          <div class="mock-nav">☼ <span>Automation</span></div>
+          <div class="mock-nav">⚙ <span>Settings</span></div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-banner">
+            <div>
+              <small>GAME SERVER</small>
+              <strong>ATM10 Lite</strong>
+              <span><i></i> Server online</span>
+            </div>
+            <div class="mock-pills"><b>1.21.1</b><b>NeoForge</b></div>
+          </div>
+          <div class="mock-grid">
+            <article><small>CPU</small><strong>12%</strong><span class="meter"><i style="width:32%"></i></span></article>
+            <article><small>MEMORY</small><strong>9.8 GB</strong><span class="meter"><i style="width:61%"></i></span></article>
+            <article><small>PLAYERS</small><strong>1 / 20</strong><span class="meter"><i style="width:18%"></i></span></article>
+            <article><small>STATUS</small><strong class="ok">Healthy</strong><span class="meter"><i style="width:92%"></i></span></article>
+          </div>
+          <div class="mock-console">
+            <div class="terminal-head"><span>Server console</span><button>Execute</button></div>
+            <pre>&gt; Server started successfully
+&gt; Loaded Minecraft 1.21.1
+&gt; Ready for players</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">FEATURES</p>
+        <h2>Everything needed for day-to-day administration.</h2>
+        <p>GamePanel is designed around a private server operator workflow rather than a public hosting marketplace.</p>
+      </div>
+      <div class="cards three">
+        <article class="card glass"><span class="icon">⏻</span><h3>Server lifecycle</h3><p>Start, stop, restart and monitor the server host from one interface.</p></article>
+        <article class="card glass"><span class="icon">▱</span><h3>Profiles & files</h3><p>Manage server profiles, configuration files, directories and game-specific settings.</p></article>
+        <article class="card glass"><span class="icon">⌘</span><h3>Console access</h3><p>Use administrative consoles for the Raspberry Pi and Xeon server without leaving the panel.</p></article>
+        <article class="card glass"><span class="icon">◫</span><h3>Backups</h3><p>Automatic and manual backups, retention controls and safe restore workflows.</p></article>
+        <article class="card glass"><span class="icon">♟</span><h3>Player management</h3><p>Inspect connected players and perform common server administration tasks.</p></article>
+        <article class="card glass"><span class="icon">＋</span><h3>Mod management</h3><p>Search, inspect, install, enable and disable compatible Minecraft mods.</p></article>
+      </div>
+    </section>
+
+    <section id="curseforge" class="section shell split">
+      <div>
+        <p class="eyebrow">CURSEFORGE CORE / 3RD PARTY API</p>
+        <h2>CurseForge-powered discovery without becoming a mod mirror.</h2>
+        <p class="lede small">The integration is built for explicit administrator actions on a self-hosted server. CurseForge remains the authoritative source for project metadata and permitted files.</p>
+      </div>
+      <div class="glass checklist">
+        <div><span>✓</span><p><strong>Search Minecraft projects</strong><br>Find mods directly from the administration panel.</p></div>
+        <div><span>✓</span><p><strong>Compatibility filtering</strong><br>Filter releases using the active Minecraft version and mod loader.</p></div>
+        <div><span>✓</span><p><strong>Project attribution</strong><br>Show project identity, authors, metadata and links back to CurseForge.</p></div>
+        <div><span>✓</span><p><strong>Explicit downloads only</strong><br>Files are requested only after an administrator chooses a release and only when the API permits access.</p></div>
+        <div><span>✓</span><p><strong>Low-volume usage</strong><br>Metadata is cached where appropriate to avoid unnecessary API requests.</p></div>
+        <div><span>✓</span><p><strong>No public redistribution</strong><br>GamePanel is not intended to host or mirror CurseForge content for third parties.</p></div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">ARCHITECTURE</p>
+        <h2>Built for a private, self-hosted environment.</h2>
+      </div>
+      <div class="architecture glass">
+        <div class="node"><small>WEB UI</small><strong>GamePanel</strong><p>Administration interface</p></div>
+        <span class="arrow">→</span>
+        <div class="node"><small>CONTROL</small><strong>Raspberry Pi</strong><p>Gateway and orchestration</p></div>
+        <span class="arrow">→</span>
+        <div class="node"><small>GAME HOST</small><strong>Server</strong><p>Dedicated game workloads</p></div>
+      </div>
+      <p class="architecture-note">Deployment addresses, credentials, API keys and SSH secrets are intentionally excluded from the public project repository.</p>
+    </section>
+
+    <section class="section shell cta glass">
+      <div>
+        <p class="eyebrow">PROJECT STATUS</p>
+        <h2>Personal, non-commercial and actively developed.</h2>
+        <p>GamePanel is currently developed for a private self-hosted environment. Additional game profiles may be added as the architecture evolves.</p>
+      </div>
+      <a class="button primary" href="https://github.com/SpiderOver/GamePanel">Browse the repository</a>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <p>GamePanel is an independent project and is not affiliated with CurseForge, Overwolf, Mojang or Microsoft.</p>
+    <a href="https://github.com/SpiderOver/GamePanel">github.com/SpiderOver/GamePanel</a>
+  </footer>
+</body>
+</html>
