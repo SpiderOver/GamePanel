@@ -1,0 +1,38 @@
+# Local secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+**/data/*api-key*
+**/data/*token*
+**/data/*secret*
+**/data/*credential*
+**/.ssh/
+
+# Local databases and runtime state
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.pid
+*.sock
+__pycache__/
+*.py[cod]
+
+# Backups and local snapshots
+*.bak
+*.bak-*
+backup-*/
+restore-*/
+
+# Generated/static caches
+static/mod-icons/
+.cache/
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
